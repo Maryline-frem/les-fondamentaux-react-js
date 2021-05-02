@@ -1,7 +1,11 @@
-.main {
-    margin: 30px;
+.form {
+    margin-top: 10px;
 }
 
-.form {
-    margin: 30px;
+.btn {
+    background-color: #3e0588;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 10px;
 }

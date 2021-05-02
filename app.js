@@ -19,7 +19,7 @@ class App extends React.Component {
 
     keepComments = (event) => {
         event.preventDefault();
-        let newComments = ["name : " + this.state.name, "message : " + this.state.msg]
+        let newComments = [...this.state.comments, this.state.name, this.state.msg]
 
         this.setState({
             comments: newComments
@@ -32,20 +32,19 @@ class App extends React.Component {
                 <h1 className="main">Say something</h1>
 
                 <form>
-                    <input  className="form" type="text" id="tabName"
+                    <input className="form" type="text" id="tabName"
                     onChange={this.changeName}
                     value={this.state.name} />
                     <br/>
 
-                    <textarea onClick={this.keepHistory} name=""
-                    className="form" type="text" id="tabmsg" 
+                    <textarea name="" className="form" type="text" id="tabmsg" 
                     onChange={this.changeMsg}
                     value={this.state.msg}
                     cols="30" rows="10"></textarea>
                     <br/>
 
                     <input onClick={this.keepComments}
-                    type="submit" value="Comment"/>
+                    className="form btn" type="submit" value="Comment"/>
                 </form>
             </div>
         )
